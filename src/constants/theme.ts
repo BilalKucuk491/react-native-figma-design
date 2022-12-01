@@ -2,7 +2,7 @@ import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
 import {Platform} from 'react-native';
 
-export const FontIos = Platform.OS === 'ios' ? 'SF-Pro' : '';
+export const FontIos = Platform.OS == 'ios' ? 'SF-Pro' : '';
 
 export const COLORS = {
   primary: '#1E1E1E',

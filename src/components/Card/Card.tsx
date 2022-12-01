@@ -3,6 +3,7 @@ import React from 'react';
 import {COLORS, images, SIZES} from '../../constants/index';
 import {useNavigation} from '@react-navigation/native';
 import {FontIos} from '../../constants/theme';
+
 interface Card {
   image_path: any;
   imageTitle: string;
@@ -44,7 +45,7 @@ const Card = ({image_path, imageTitle, imageArtist}: Card) => {
 const styles = StyleSheet.create({
   container: {
     width: 165,
-    height: 210,
+    height: 220,
     marginLeft: (SIZES.width - 165 * 2) / 3,
     marginTop: 10,
     marginBottom: 10,
@@ -72,6 +73,7 @@ const styles = StyleSheet.create({
     fontFamily: FontIos,
     lineHeight: 17.9,
     top: 15,
+
   },
 });
 

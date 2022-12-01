@@ -2,8 +2,7 @@ import {View, ScrollView, Text} from 'react-native';
 import React from 'react';
 import Card from './Card';
 import dummyData from '../../assets/Data/dummyData';
-import { FontIos } from '../../constants/theme';
-
+import {SIZES} from '../../constants/theme';
 
 const CardList = () => {
   const data = dummyData;
@@ -17,6 +16,7 @@ const CardList = () => {
               flexDirection: 'row',
               flexWrap: 'wrap',
               justifyContent: 'center',
+              marginLeft: -(SIZES.width - 165 * 2) / 3,
             }}>
             {data
               .filter(el => {
