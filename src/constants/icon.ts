@@ -11,9 +11,11 @@ const tinyStar = require('../assets/icons/tinyStar.png');
 const treeDots = require('../assets/icons/tree-dots.png');
 const zuletzt = require('../assets/icons/zuletzt.png');
 const person = require('../assets/icons/person.png');
+const blackDots = require('../assets/icons/black-dots.png');
 
 export {
   dialog,
+  blackDots,
   folderOutline,
   gespeichert,
   leftArrow,

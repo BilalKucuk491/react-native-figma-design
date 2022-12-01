@@ -1,4 +1,4 @@
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, ScrollView} from 'react-native';
 import React from 'react';
 import dummyData from '../assets/Data/dummyData';
 import DetailCard from '../components/DetailCard/DetailCard';
@@ -10,8 +10,13 @@ const ZuletztScreen = () => {
   return (
     <>
       <HeaderContext />
-      <HeaderPoster />
-      <Context/>
+
+      <ScrollView showsVerticalScrollIndicator={false} >
+        <HeaderPoster />
+
+        <Context />
+      </ScrollView>
+
       <View style={styles.detailCardContainer}>
         <DetailCard
           imageArtist={dummyData[4].imageArtist}
@@ -30,7 +35,6 @@ const styles = StyleSheet.create({
   },
   detailCardContainer: {
     height: 65,
-    position: 'absolute',
     bottom: 0,
   },
 });
