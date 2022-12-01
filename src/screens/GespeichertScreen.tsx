@@ -8,13 +8,13 @@ import Header from '../components/Header/index';
 const GespeichertScreen = () => {
   return (
     <>
-      <View style={{height: 150, backgroundColor: '#fff'}}>
-        <Header />
-      </View>
-      <View style={styles.container}>
-        <CardList data={dummyData} />
-      </View>
-      <View style={{height: 65,position:"absolute",bottom:0}}>
+       <View style={{height: 150, backgroundColor: '#fff'}}>
+          <Header />
+        </View>
+        <View style={styles.container}>
+          <CardList data={dummyData} />
+        </View>
+      <View style={{height: 65, bottom: 0}}>
         <DetailCard
           imageArtist={dummyData[4].imageArtist}
           image_path={dummyData[4].image_path}

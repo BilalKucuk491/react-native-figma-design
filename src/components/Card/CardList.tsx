@@ -16,9 +16,14 @@ const CardList = ({data}: CardListInterface) => {
   return (
     <>
       {data != null ? (
-        <ScrollView>
-          <View style={{ flexDirection: 'row',
-  flexWrap: 'wrap',justifyContent:"center"}}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View
+            style={{
+              flex:1,
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+            }}>
             {data
               .filter(el => {
                 return el != null;
