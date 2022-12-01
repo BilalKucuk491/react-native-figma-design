@@ -14,7 +14,7 @@ export const COLORS = {
 
   white: '#fff',
   white2: '#F9F9F9',
-  black: '#020202',
+  black: '#000',
   blue: '#4096FE',
   gray: '#777777',
   gray2: '#F8F8F8',
@@ -22,21 +22,15 @@ export const COLORS = {
   lightGray2: '#757575',
 
   // custom colors
-  tintColor:"#959595",
-  focusedColor:"#007AFE",
-
-
-  
-  transparentBlack1: 'rgba(2, 2, 2, 0.1)',
-  transparentBlack3: 'rgba(2, 2, 2, 0.3)',
-  transparentBlack5: 'rgba(2, 2, 2, 0.5)',
-  transparentBlack7: 'rgba(2, 2, 2, 0.7)',
-  transparentBlack9: 'rgba(2, 2, 2, 0.9)',
+  tintColor: '#959595',
+  focusedColor: '#007AFE',
+  backgroundColor: '#F5F5F5',
+  artistColor:"#89898D",
 
   transparentGray: 'rgba(77,77,77, 0.8)',
   transparentDarkGray: 'rgba(20,20,20, 0.8)',
 
-  transparent: 'transparent',
+  transparent: 'transparent'
 };
 export const SIZES = {
   // global sizes

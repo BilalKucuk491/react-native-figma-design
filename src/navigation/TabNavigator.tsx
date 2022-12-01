@@ -41,7 +41,7 @@ const TabNavigator = () => {
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
           height: 80,
-          backgroundColor: "#F7F7F7E5",
+          backgroundColor: "#e9e5e5",
           borderTopColor: 'transparent',
         },
       }}>

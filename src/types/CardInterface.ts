@@ -1,5 +1,5 @@
 export interface CardInterface {
-    image_path: string;
+    image_path: any;
     imageTitle: string;
     imageArtist: string;
   }

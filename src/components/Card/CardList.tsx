@@ -14,26 +14,26 @@ interface CardListInterface {
 
 const CardList = ({data}: CardListInterface) => {
   return (
-    <View style={{flex: 1}}>
+    <>
       {data != null ? (
-        <ScrollView style={{
-          flex:1,
-          flexDirection:"row",
-        }}>
-          {data
-            .filter(el => {
-              return el != null;
-            })
-            .map((item, key) => {
-              return (
-                <Card
-                  key={key}
-                  image_path={item.image_path}
-                  imageTitle={item.imageTitle}
-                  imageArtist={item.imageArtist}
-                />
-              );
-            })}
+        <ScrollView>
+          <View style={{ flexDirection: 'row',
+  flexWrap: 'wrap',justifyContent:"center"}}>
+            {data
+              .filter(el => {
+                return el != null;
+              })
+              .map((item, key) => {
+                return (
+                  <Card
+                    key={key}
+                    image_path={item.image_path}
+                    imageTitle={item.imageTitle}
+                    imageArtist={item.imageArtist}
+                  />
+                );
+              })}
+          </View>
         </ScrollView>
       ) : (
         <Text
@@ -43,10 +43,10 @@ const CardList = ({data}: CardListInterface) => {
             fontSize: 20,
             fontWeight: 'bold',
           }}>
-          Arama sonucu bulunamadi...
+          Hata
         </Text>
       )}
-    </View>
+    </>
   );
 };
 
