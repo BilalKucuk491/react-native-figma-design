@@ -13,8 +13,8 @@ const Router = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={'ZuletztScreen'}>
-        <Stack.Screen name="ZuletztScreen" component={TabNavigator} />
+        initialRouteName={'Zuletzt'}>
+        <Stack.Screen name="Zuletzt" component={TabNavigator} />
       </Stack.Navigator>
     </NavigationContainer>
   );

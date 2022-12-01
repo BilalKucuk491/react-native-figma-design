@@ -22,13 +22,11 @@ export const COLORS = {
   lightGray2: '#757575',
 
   // custom colors
-  backgroundColor: '#161616',
-  titleColor: '#fff',
-  textColor: '#161616',
-  cardColor: '#373737',
-  inputBackgroundColor: '#F6D632',
-  checkIconColor: '#F6D632',
+  tintColor:"#959595",
+  focusedColor:"#007AFE",
 
+
+  
   transparentBlack1: 'rgba(2, 2, 2, 0.1)',
   transparentBlack3: 'rgba(2, 2, 2, 0.3)',
   transparentBlack5: 'rgba(2, 2, 2, 0.5)',

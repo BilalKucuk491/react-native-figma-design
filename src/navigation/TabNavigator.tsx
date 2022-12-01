@@ -40,8 +40,8 @@ const TabNavigator = () => {
         tabBarShowLabel: false,
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
-          height: 90,
-          backgroundColor: "#fff",
+          height: 80,
+          backgroundColor: "#F7F7F7E5",
           borderTopColor: 'transparent',
         },
       }}>
@@ -50,7 +50,7 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <TabIcon focused={focused} icon={icons.home} label="Zuletzt" />
+                <TabIcon focused={focused} icon={icons.zuletzt} label="Zuletzt" />
               );
             }
           },
@@ -72,7 +72,7 @@ const TabNavigator = () => {
               return (
                 <TabIcon
                   focused={focused}
-                  icon={icons.search}
+                  icon={icons.gespeichert}
                   label="Gespeichert"
                 />
               );
@@ -97,7 +97,7 @@ const TabNavigator = () => {
               return (
                 <TabIcon
                   focused={focused}
-                  icon={icons.video}
+                  icon={icons.suchen}
                   label="Suchen"
                 />
               );
@@ -121,7 +121,7 @@ const TabNavigator = () => {
               return (
                 <TabIcon
                   focused={focused}
-                  icon={icons.personel}
+                  icon={icons.person}
                   label="Spirit"
                 />
               );

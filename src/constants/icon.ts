@@ -1,20 +1,29 @@
-
-const anchovy = require('../assets/icons/anchovy.png');
-const back = require('../assets/icons/back.png');
-const bookmarkFilled = require('../assets/icons/bookmark-filled.png');
-const bookmark = require('../assets/icons/bookmark.png');
-const home = require('../assets/icons/home.png');
-const search = require('../assets/icons/search.png');
-const video = require('../assets/icons/video-play.png');
-const personel = require('../assets/icons/profile.png');
+const dialog = require('../assets/icons/dialog.png');
+const folderOutline = require('../assets/icons/folder-outline.png');
+const gespeichert = require('../assets/icons/gespeichert.png');
+const leftArrow = require('../assets/icons/left-arrow.png');
+const navbar = require('../assets/icons/navbar.png');
+const plus = require('../assets/icons/plus.png');
+const shareOutline = require('../assets/icons/share-outline.png');
+const starOutline = require('../assets/icons/star-outline.png');
+const suchen = require('../assets/icons/suchen.png');
+const tinyStar = require('../assets/icons/tinyStar.png');
+const treeDots = require('../assets/icons/tree-dots.png');
+const zuletzt = require('../assets/icons/zuletzt.png');
+const person = require('../assets/icons/person.png');
 
 export {
-  bookmark,
-  bookmarkFilled,
-  back,
-  home,
-  search,
-  video,
-  anchovy,
-  personel
+  dialog,
+  folderOutline,
+  gespeichert,
+  leftArrow,
+  navbar,
+  plus,
+  shareOutline,
+  starOutline,
+  suchen,
+  tinyStar,
+  treeDots,
+  zuletzt,
+  person,
 };

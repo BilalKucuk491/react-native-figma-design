@@ -49,14 +49,14 @@ const TabIcon = ({
           style={{
             height: 25,
             width: 25,
-            tintColor: focused ? COLORS.white : COLORS.secondary,
+            tintColor: focused ? COLORS.focusedColor : COLORS.tintColor,
             ...iconStyle,
           }}
         />
         <Text
           style={{
-            color: focused ? COLORS.white : COLORS.secondary,
-            ...FONTS.h4,
+            color: focused ? COLORS.focusedColor : COLORS.tintColor,
+            fontFamily: 'Roboto-Bold', fontSize: 14, lineHeight: 22
           }}>
           {label}
         </Text>
