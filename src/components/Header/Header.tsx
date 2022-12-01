@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     borderRadius: 38,
     justifyContent: 'center',
     alignItems: 'center',
+    bottom:8   
   },
   searchContainer: {
     justifyContent: 'center',

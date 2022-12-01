@@ -3,7 +3,6 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import TabNavigator from './navigation/TabNavigator';
-
 const Stack = createStackNavigator();
 
 const Router = () => {
@@ -13,8 +12,9 @@ const Router = () => {
         screenOptions={{
           headerShown: false,
         }}
-        initialRouteName={'Zuletzt'}>
-        <Stack.Screen name="Zuletzt" component={TabNavigator} />
+        initialRouteName={'Gespeichert'}>
+        <Stack.Screen name="Gespeichert" component={TabNavigator} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );

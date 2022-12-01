@@ -14,7 +14,7 @@ const GespeichertScreen = () => {
       <View style={styles.container}>
         <CardList data={dummyData} />
       </View>
-      <View style={{height: 65}}>
+      <View style={{height: 65,position:"absolute",bottom:0}}>
         <DetailCard
           imageArtist={dummyData[4].imageArtist}
           image_path={dummyData[4].image_path}

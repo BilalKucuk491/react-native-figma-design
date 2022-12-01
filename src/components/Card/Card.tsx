@@ -8,8 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import {COLORS, images} from '../../constants/index';
-
-const width = Dimensions.get('window').width;
+import {useNavigation} from '@react-navigation/native';
 interface Card {
   image_path: any;
   imageTitle: string;
@@ -17,9 +16,11 @@ interface Card {
 }
 
 const Card = ({image_path, imageTitle, imageArtist}: Card) => {
+  const navigation = useNavigation();
+  // onPress={() => navigation.navigate('Zuletzt')}
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("ZuletztScreen")} >
         {image_path !== null ? (
           <Image source={image_path} style={styles.image} />
         ) : (
@@ -68,16 +69,14 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '400',
     lineHeight: 17.9,
-    top:10
-
+    top: 10,
   },
   imageArtist: {
     color: COLORS.artistColor,
     fontSize: 15,
     fontWeight: '400',
     lineHeight: 17.9,
-    top:10
-
+    top: 10,
   },
 });
 
