@@ -8,7 +8,7 @@ import Header from '../components/Header/index';
 const GespeichertScreen = () => {
   return (
     <>
-      <View style={{height: 140, backgroundColor: '#fff'}}>
+      <View style={{height: 150, backgroundColor: '#fff'}}>
         <Header />
       </View>
       <View style={styles.container}>
