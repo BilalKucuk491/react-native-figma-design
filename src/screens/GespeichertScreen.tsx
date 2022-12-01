@@ -1,13 +1,16 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-import {COLORS} from '../constants';
 import {CardList} from '../components/Card';
 import dummyData from '../assets/Data/dummyData';
 import DetailCard from '../components/DetailCard/DetailCard';
+import Header from '../components/Header/index';
 
 const GespeichertScreen = () => {
   return (
     <>
+      <View style={{height: 140, backgroundColor: '#fff'}}>
+        <Header />
+      </View>
       <View style={styles.container}>
         <CardList data={dummyData} />
       </View>
@@ -25,7 +28,7 @@ const GespeichertScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.backgroundColor,
+    backgroundColor: '#fff',
   },
 });
 

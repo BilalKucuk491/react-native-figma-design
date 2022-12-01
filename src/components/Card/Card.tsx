@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     height: 210,
     marginLeft: 10,
     marginTop: 10,
+    marginBottom: 10,
   },
   image: {
     borderWidth: 1,
@@ -67,12 +68,16 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: '400',
     lineHeight: 17.9,
+    top:10
+
   },
   imageArtist: {
     color: COLORS.artistColor,
     fontSize: 15,
     fontWeight: '400',
     lineHeight: 17.9,
+    top:10
+
   },
 });
 
