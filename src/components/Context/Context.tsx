@@ -10,7 +10,6 @@ interface ContextInterface {
 }
 
 const ContextComponent = ({iconNumber, num, optionTitle}: ContextInterface) => {
-  
   return (
     <View>
       <View style={styles.iconContainer}>
@@ -44,30 +43,54 @@ const Context = () => {
           <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
           <View style={styles.line} />
         </View>
-        <ContextComponent
-          key={1}
-          iconNumber={dummyContext[0].childs[0].iconNum}
-          num={1}
-          optionTitle={dummyContext[0].childs[0].title}
-        />
-        <ContextComponent
-          key={2}
-          iconNumber={dummyContext[0].childs[1].iconNum}
-          num={2}
-          optionTitle={dummyContext[0].childs[1].title}
-        />
-        <ContextComponent
-          key={3}
-          iconNumber={dummyContext[0].childs[2].iconNum}
-          num={3}
-          optionTitle={dummyContext[0].childs[2].title}
-        />
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
+            </View>
+            <Text style={styles.number}>1</Text>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Einleitung</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
+            </View>
+            <Text style={styles.number}>2</Text>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Hauptteil</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
+            </View>
+            <Text style={styles.number}>3</Text>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Schluss</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
       </View>
 
       {dummyContext.map((item, key) => {
         return (
           <>
-            <View style={{marginTop: 50}} />
+            <View style={{marginTop: 25}} />
             <View style={styles.container}>
               <View style={styles.titleContainer}>
                 <Text style={styles.title}>{item.title}</Text>
@@ -86,9 +109,85 @@ const Context = () => {
                 );
               })}
             </View>
+            <View style={{marginTop: 25}} />
           </>
         );
       })}
+
+      <View style={{marginTop: 25}} />
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Als wichtig markierte Infos</Text>
+          <Text style={styles.subTitle}>Von dir</Text>
+          <View style={styles.line} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image
+                style={{width: 15, height: 15, marginLeft: 15}}
+                source={icons.dialog}
+              />
+            </View>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Tatte: Textart, Auto, Titel, Them...</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image
+                style={{width: 15, height: 15, marginLeft: 15}}
+                source={icons.dialog}
+              />
+            </View>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Deckungshypothese, Vermutun...</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image
+                style={{width: 15, height: 15, marginLeft: 15}}
+                source={icons.dialog}
+              />
+            </View>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Inhaltsangabe, Kurze Zusamme...</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+
+        <View>
+          <View style={styles.iconContainer}>
+            <View style={styles.tinyStarContainer}>
+              <Image
+                style={{width: 15, height: 15, marginLeft: 15}}
+                source={icons.dialog}
+              />
+            </View>
+          </View>
+          <View style={styles.ChildContainer}>
+            <Text>Sprachliche Mittel</Text>
+            <Image style={{marginRight: 20}} source={icons.blackDots} />
+          </View>
+          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+        </View>
+      </View>
+
+      <View style={{marginTop: 65}} />
     </View>
   );
 };
@@ -113,6 +212,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    flex: 1,
   },
   tinyStarContainer: {
     justifyContent: 'center',

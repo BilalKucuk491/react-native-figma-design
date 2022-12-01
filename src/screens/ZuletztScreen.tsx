@@ -11,7 +11,9 @@ const ZuletztScreen = () => {
     <>
       <HeaderContext />
 
-      <ScrollView showsVerticalScrollIndicator={false} >
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+       >
         <HeaderPoster />
 
         <Context />
