@@ -1,15 +1,15 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {CardList} from '../components/Card';
 import DetailCard from '../components/DetailCard/DetailCard';
-import {SIZES} from '../constants';
+import {icons, SIZES} from '../constants';
+import {FontIos} from '../constants/theme';
+import Header from '../components/Header';
 
 const GespeichertScreen = () => {
   return (
     <>
-      <View style={styles.GespeichertContainer}>
-        <Text style={styles.Gespeichert}>Gespeichert</Text>
-      </View>
+      <Header />
 
       <CardList />
 
@@ -23,8 +23,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  GespeichertContainer: {},
-  Gespeichert: {},
 });
 
 export default GespeichertScreen;
