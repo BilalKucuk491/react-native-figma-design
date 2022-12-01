@@ -1,4 +1,5 @@
 import {
+  image_00,
   image_01,
   image_02,
   image_03,
@@ -14,7 +15,7 @@ const dummyData = [
     imageArtist: 'Geschichte',
   },
   {
-    image_path: image_01,
+    image_path: image_00,
     imageTitle: 'Säugetiere der Meer...',
     imageArtist: 'Biologie',
   },

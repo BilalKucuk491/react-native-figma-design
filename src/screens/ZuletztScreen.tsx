@@ -11,21 +11,13 @@ const ZuletztScreen = () => {
     <>
       <HeaderContext />
 
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-       >
+      <ScrollView showsVerticalScrollIndicator={false}>
         <HeaderPoster />
 
         <Context />
       </ScrollView>
 
-      <View style={styles.detailCardContainer}>
-        <DetailCard
-          imageArtist={dummyData[4].imageArtist}
-          image_path={dummyData[4].image_path}
-          imageTitle={dummyData[4].imageTitle}
-        />
-      </View>
+      <DetailCard />
     </>
   );
 };
