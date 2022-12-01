@@ -16,9 +16,11 @@ const HeaderPoster = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10,
+    top: 20,
     flexDirection: 'row',
     marginHorizontal: 15,
+    marginLeft: 30,
+
   },
   contextContainer: {
     marginLeft: 10,

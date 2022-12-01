@@ -4,12 +4,14 @@ import dummyData from '../assets/Data/dummyData';
 import DetailCard from '../components/DetailCard/DetailCard';
 import HeaderContext from '../components/HeaderContext/HeaderContext';
 import HeaderPoster from '../components/HeaderPoster';
+import Context from '../components/Context';
 
 const ZuletztScreen = () => {
   return (
     <>
       <HeaderContext />
       <HeaderPoster />
+      <Context/>
       <View style={styles.detailCardContainer}>
         <DetailCard
           imageArtist={dummyData[4].imageArtist}
