@@ -1,5 +1,8 @@
 import {Dimensions} from 'react-native';
 const {width, height} = Dimensions.get('window');
+import {Platform} from 'react-native';
+
+export const FontIos = Platform.OS === 'ios' ? 'SF-Pro' : '';
 
 export const COLORS = {
   primary: '#1E1E1E',
@@ -25,12 +28,12 @@ export const COLORS = {
   tintColor: '#959595',
   focusedColor: '#007AFE',
   backgroundColor: '#F5F5F5',
-  artistColor:"#89898D",
+  artistColor: '#89898D',
 
   transparentGray: 'rgba(77,77,77, 0.8)',
   transparentDarkGray: 'rgba(20,20,20, 0.8)',
 
-  transparent: 'transparent'
+  transparent: 'transparent',
 };
 export const SIZES = {
   // global sizes
@@ -68,6 +71,6 @@ export const FONTS = {
   body5: {fontFamily: 'Roboto-Regular', fontSize: SIZES.body5, lineHeight: 22},
 };
 
-const appTheme = {COLORS, SIZES, FONTS};
+const appTheme = {COLORS, SIZES, FONTS, FontIos};
 
 export default appTheme;

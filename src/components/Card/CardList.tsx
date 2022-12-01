@@ -1,25 +1,19 @@
 import {View, ScrollView, Text} from 'react-native';
 import React from 'react';
 import Card from './Card';
+import dummyData from '../../assets/Data/dummyData';
+import { FontIos } from '../../constants/theme';
 
-interface CardInterface {
-  image_path: string;
-  imageTitle: string;
-  imageArtist: string;
-}
 
-interface CardListInterface {
-  data: Array<CardInterface>;
-}
-
-const CardList = ({data}: CardListInterface) => {
+const CardList = () => {
+  const data = dummyData;
   return (
     <>
       {data != null ? (
         <ScrollView showsVerticalScrollIndicator={false}>
           <View
             style={{
-              flex:1,
+              flex: 1,
               flexDirection: 'row',
               flexWrap: 'wrap',
               justifyContent: 'center',

@@ -1,14 +1,8 @@
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  Dimensions,
-  TouchableOpacity,
-} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
-import {COLORS, images} from '../../constants/index';
+import {COLORS, images, SIZES} from '../../constants/index';
 import {useNavigation} from '@react-navigation/native';
+import {FontIos} from '../../constants/theme';
 interface Card {
   image_path: any;
   imageTitle: string;
@@ -20,7 +14,7 @@ const Card = ({image_path, imageTitle, imageArtist}: Card) => {
   // onPress={() => navigation.navigate('Zuletzt')}
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => navigation.navigate("ZuletztScreen")} >
+      <TouchableOpacity onPress={() => navigation.navigate('ZuletztScreen')}>
         {image_path !== null ? (
           <Image source={image_path} style={styles.image} />
         ) : (
@@ -51,14 +45,13 @@ const styles = StyleSheet.create({
   container: {
     width: 165,
     height: 210,
-    marginLeft: 10,
+    marginLeft: (SIZES.width - 165 * 2) / 3,
     marginTop: 10,
     marginBottom: 10,
   },
   image: {
     borderWidth: 1,
     borderRadius: 10,
-    padding: 20,
     resizeMode: 'contain',
     justifyContent: 'center',
     height: 165,
@@ -67,6 +60,7 @@ const styles = StyleSheet.create({
   imageTitle: {
     color: '#000',
     fontSize: 15,
+    fontFamily: FontIos,
     fontWeight: '400',
     lineHeight: 17.9,
     top: 10,
@@ -75,8 +69,9 @@ const styles = StyleSheet.create({
     color: COLORS.artistColor,
     fontSize: 15,
     fontWeight: '400',
+    fontFamily: FontIos,
     lineHeight: 17.9,
-    top: 10,
+    top: 15,
   },
 });
 

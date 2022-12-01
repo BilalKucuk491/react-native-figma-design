@@ -2,35 +2,31 @@ import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {images, SIZES} from '../../constants/index';
 import {CardInterface} from '../../types/CardInterface';
+import dummyData from '../../assets/Data/dummyData';
+import {FontIos} from '../../constants/theme';
 
-const DetailCard = ({image_path, imageTitle, imageArtist}: CardInterface) => {
+const DetailCard = () => {
   return (
-    <View style={styles.container}>
-      {image_path !== null ? (
-        <Image source={image_path} style={styles.image} />
-      ) : (
-        <Image source={images.notFoundImage} style={styles.image} />
-      )}
+    <View style={{height: 65, bottom: 0}}>
+      <View style={styles.container}>
+        <Image source={dummyData[4].image_path} style={styles.image} />
 
-      <View  style={styles.HeaderContainer}>
-        <View style={styles.TitleContainer}>
-          <Text style={styles.imageTitle}>
-            {imageTitle === null
-              ? 'NONE'
-              : imageTitle.length < 250
-              ? `${imageTitle}`
-              : `${imageTitle.substring(0, 40)}...`}
+        <View style={styles.HeaderContainer}>
+          <View style={styles.TitleContainer}>
+            <Text style={styles.imageTitle}>
+              {dummyData[4].imageTitle.length < 250
+                ? `${dummyData[4].imageTitle}`
+                : `${dummyData[4].imageTitle.substring(0, 40)}...`}
+            </Text>
+            <Text style={styles.dots}>...</Text>
+          </View>
+
+          <Text style={styles.imageArtist}>
+            {dummyData[4].imageArtist.length < 250
+              ? `${dummyData[4].imageArtist}`
+              : `${dummyData[4].imageArtist.substring(0, 40)}...`}
           </Text>
-          <Text style={styles.dots}>...</Text>
         </View>
-
-        <Text style={styles.imageArtist}>
-          {imageArtist === null
-            ? 'NONE'
-            : imageArtist.length < 250
-            ? `${imageArtist}`
-            : `${imageArtist.substring(0, 40)}...`}
-        </Text>
       </View>
     </View>
   );
@@ -44,9 +40,9 @@ const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     width: SIZES.width,
-    height:60,
-    justifyContent:"center",
-    alignItems:"center"
+    height: 65,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   image: {
     height: 44,
@@ -57,26 +53,28 @@ const styles = StyleSheet.create({
   imageTitle: {
     color: '#000',
     fontSize: 15,
+    fontFamily: FontIos,
   },
   imageArtist: {
     color: '#A2A2A6',
-    marginBottom:10
-
+    marginBottom: 15,
   },
   TitleContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: SIZES.width - 100,
-    alignItems:"center"
+    alignItems: 'center',
   },
-  HeaderContainer:{
-    marginLeft:10,
-    top:0
+  HeaderContainer: {
+    marginLeft: 10,
+    top: 0,
+    marginTop: 10,
   },
   dots: {
-    color: '##C6C8CD',
+    color: '#C6C8CD',
     fontSize: 20,
+    fontFamily: FontIos,
   },
 });
 
