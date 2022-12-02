@@ -1,254 +1,238 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import dummyContext from '../../assets/Data/dummyContext';
-import {icons} from '../../constants';
+import {icons, SIZES} from '../../constants';
+import {FontIos} from '../../constants/theme';
 
-interface ContextInterface {
-  iconNumber: number;
+const marginDistance = (SIZES.width - 337) / 3;
+
+interface RowComponentInterface {
   num?: number;
-  optionTitle: string;
+  title: string;
+  iconName?: any;
+  lastLine?: boolean;
 }
 
-const ContextComponent = ({iconNumber, num, optionTitle}: ContextInterface) => {
+const RowComponent = ({
+  num,
+  title,
+  iconName,
+  lastLine = true,
+}: RowComponentInterface) => {
   return (
-    <View>
-      <View style={styles.iconContainer}>
-        <View style={styles.tinyStarContainer}>
-          {iconNumber !== 0 ? (
-            <Image
-              style={{width: 15, height: 15}}
-              source={iconNumber == 1 ? icons.tinyStar : icons.dialog}
-            />
+    <View style={styles.rowContainer}>
+      <View style={styles.tinyIconContainer}>
+      {iconName == icons.dialog ? (
+          <Image style={{...styles.tinyIcon,marginLeft:20,marginRight:-20}} source={iconName} />
+        ) : (
+          <Image style={styles.tinyIcon} source={iconName} />
+        )}
+      </View>
+      <View style={styles.numberContainer}>
+        {num != null ? (
+          num >= 10 && iconName != null ? (
+            <Text style={{...styles.number, marginLeft: -10, marginRight: -15}}>
+              {num}
+            </Text>
           ) : (
-            ''
-          )}
-        </View>
-        <Text style={styles.number}>{num}</Text>
+            <Text style={styles.number}>{num}</Text>
+          )
+        ) : (
+          ''
+        )}
       </View>
-      <View style={styles.ChildContainer}>
-        <Text>{optionTitle}</Text>
-        <Image style={{marginRight: 20}} source={icons.blackDots} />
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{title}</Text>
+        {lastLine && <View style={styles.smallSeperator} />}
       </View>
-      <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
+
+      <View style={styles.threeDotsContainer}>
+        <Image style={styles.threeDots} source={icons.blackDots} />
+      </View>
     </View>
   );
 };
 
 const Context = () => {
   return (
-    <View>
+    <>
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Formelle Struktur</Text>
+        </View>
+        <View style={styles.subTitleContainer}>
           <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
-          <View style={styles.line} />
         </View>
 
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
-            </View>
-            <Text style={styles.number}>1</Text>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Einleitung</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
-
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
-            </View>
-            <Text style={styles.number}>2</Text>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Hauptteil</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
-
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image style={{width: 15, height: 15}} source={icons.tinyStar} />
-            </View>
-            <Text style={styles.number}>3</Text>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Schluss</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
+        <View style={styles.normalSeperator} />
+        <RowComponent num={1} title="Einleitung" iconName={icons.tinyStar} />
+        <RowComponent num={2} title="Hauptteil" iconName={icons.tinyStar} />
+        <RowComponent
+          num={3}
+          title="Schluss"
+          iconName={icons.tinyStar}
+          lastLine={false}
+        />
+        <View style={{...styles.normalSeperator, bottom: 20}} />
       </View>
 
-      {dummyContext.map((item, key) => {
-        return (
-          <>
-            <View style={{marginTop: 25}} />
-            <View style={styles.container}>
-              <View style={styles.titleContainer}>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.subTitle}>{item.subTitle}</Text>
-                <View style={styles.line} />
-              </View>
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Formaler Aufbau</Text>
+        </View>
+        <View style={styles.subTitleContainer}>
+          <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
+        </View>
 
-              {item.childs.map((element, index) => {
-                return (
-                  <ContextComponent
-                    key={index}
-                    iconNumber={element.iconNum}
-                    num={element.number}
-                    optionTitle={element.title}
-                  />
-                );
-              })}
-            </View>
-            <View style={{marginTop: 25}} />
-          </>
-        );
-      })}
+        <View style={styles.normalSeperator} />
+        <RowComponent num={4} title="Metrum" iconName={icons.tinyStar} />
+        <RowComponent num={5} title="Kadenz" iconName={icons.tinyStar} />
+        <RowComponent
+          num={6}
+          title="Schluss"
+          iconName={icons.tinyStar}
+          lastLine={false}
+        />
+        <View style={{...styles.normalSeperator, bottom: 20}} />
+      </View>
 
-      <View style={{marginTop: 25}} />
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Formulierungshilfen</Text>
+        </View>
+        <View style={styles.subTitleContainer}>
+          <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
+        </View>
+
+        <View style={styles.normalSeperator} />
+        <RowComponent num={7} title="Satzanfänge" />
+        <RowComponent num={8} title="Beschreibung/Wirkung" />
+        <RowComponent num={9} title="Synonyme" />
+        <RowComponent num={10} title="Sprachliche Mittel" lastLine={false} />
+        <View style={{...styles.normalSeperator, bottom: 20}} />
+      </View>
+
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Epochen der Naturlyrik</Text>
+        </View>
+        <View style={styles.subTitleContainer}>
+          <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
+        </View>
+
+        <View style={styles.normalSeperator} />
+        <RowComponent
+          num={11}
+          title="Sturm und Drang (1773-1784)"
+          iconName={icons.tinyStar}
+        />
+        <RowComponent num={12} title="Romantik (1785-1835)" />
+        <RowComponent
+          num={13}
+          title="Realismus (1830-1890)"
+          iconName={icons.tinyStar}
+        />
+        <RowComponent num={14} title="Expressionismus (1910-1924) " />
+        <RowComponent
+          num={15}
+          title="Moderne (2000er Jahre) "
+          lastLine={false}
+        />
+        <View style={{...styles.normalSeperator, bottom: 20}} />
+      </View>
+
       <View style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Als wichtig markierte Infos</Text>
+        </View>
+        <View style={styles.subTitleContainer}>
           <Text style={styles.subTitle}>Von dir</Text>
-          <View style={styles.line} />
         </View>
 
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image
-                style={{width: 15, height: 15, marginLeft: 15}}
-                source={icons.dialog}
-              />
-            </View>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Tatte: Textart, Auto, Titel, Them...</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
-
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image
-                style={{width: 15, height: 15, marginLeft: 15}}
-                source={icons.dialog}
-              />
-            </View>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Deckungshypothese, Vermutun...</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
-
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image
-                style={{width: 15, height: 15, marginLeft: 15}}
-                source={icons.dialog}
-              />
-            </View>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Inhaltsangabe, Kurze Zusamme...</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
-
-        <View>
-          <View style={styles.iconContainer}>
-            <View style={styles.tinyStarContainer}>
-              <Image
-                style={{width: 15, height: 15, marginLeft: 15}}
-                source={icons.dialog}
-              />
-            </View>
-          </View>
-          <View style={styles.ChildContainer}>
-            <Text>Sprachliche Mittel</Text>
-            <Image style={{marginRight: 20}} source={icons.blackDots} />
-          </View>
-          <View style={{...styles.line, marginLeft: 58, marginVertical: 15}} />
-        </View>
+        <View style={styles.normalSeperator} />
+        <RowComponent
+          title="Tatte: Textart, Auto, Titel, Them..."
+          iconName={icons.dialog}
+        />
+        <RowComponent
+          title="Deckungshypothese, Vermutun..."
+          iconName={icons.dialog}
+        />
+        <RowComponent
+          title="Inhaltsangabe, Kurze Zusamme..."
+          iconName={icons.dialog}
+        />
+        <RowComponent
+          title="Sprachliche Mittel"
+          iconName={icons.dialog}
+          lastLine={false}
+        />
+        <View style={{...styles.normalSeperator, bottom: 20}} />
       </View>
-
-      <View style={{marginTop: 65}} />
-    </View>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    top: 45,
+    marginTop: marginDistance / 2,
   },
   titleContainer: {
-    marginLeft: 30,
-    marginVertical: 5,
-  },
-  ChildContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginLeft: 58,
-  },
-  iconContainer: {
-    top: 20,
-    width: 35,
-    marginLeft: 15,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    flex: 1,
-  },
-  tinyStarContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  number: {
-    fontSize: 17,
-    lineHeight: 20,
-    fontWeight: '400',
-    color: '#898A8D',
-  },
-  contextContainer: {
-    marginLeft: 20,
-    flexDirection: 'row',
+    marginLeft: marginDistance,
   },
   title: {
-    fontSize: 17,
-    lineHeight: 20.29,
+    fontFamily: FontIos,
     fontWeight: '600',
+    fontSize: 20,
     color: '#000',
   },
+  subTitleContainer: {
+    marginLeft: marginDistance,
+  },
   subTitle: {
-    fontSize: 13,
-    lineHeight: 25,
+    fontFamily: FontIos,
     fontWeight: '400',
+    fontSize: 15,
     color: '#989898',
   },
-  line: {
+  normalSeperator: {
     backgroundColor: '#C6C6C8',
-    height: 0.75,
+    height: 0.9,
+    marginLeft: marginDistance,
+    marginBottom: marginDistance / 3,
+    marginTop: marginDistance / 4,
   },
-  starContainer: {
+  smallSeperator: {
+    backgroundColor: '#C6C6C8',
+    height: 1,
+    marginTop: marginDistance / 3,
+  },
+  rowContainer: {
+    flex: 1,
+    flexDirection: 'row',
+    marginLeft: marginDistance / 3,
+  },
+
+  tinyIconContainer: {
     justifyContent: 'center',
-    margin: 5,
+    alignItems: 'center',
+    marginBottom: marginDistance,
   },
-  star: {},
+  tinyIcon: {},
+  numberContainer: {
+    marginLeft: SIZES.width / 16.7 / 1.5,
+    marginRight: SIZES.width / 16.7 / 1.5,
+  },
+  number: {},
+  textContainer: {
+    flex: 1,
+  },
+  text: {},
+  threeDotsContainer: {
+    marginBottom: marginDistance,
+    marginRight: SIZES.width / 16.7 / 1.5,
+  },
+  threeDots: {},
 });
 
 export default Context;

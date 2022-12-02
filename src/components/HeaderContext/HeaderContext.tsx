@@ -1,6 +1,7 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {icons} from '../../constants';
+import {FontIos} from '../../constants/theme';
 const HeaderContext = () => {
   return (
     <View style={{marginTop: 50}}>
@@ -25,7 +26,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginHorizontal: 5,
+    marginHorizontal: 10,
   },
   circle: {
     width: 28,
@@ -47,6 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '600',
     color: '#000',
+    fontFamily: FontIos,
   },
 });
 export default HeaderContext;

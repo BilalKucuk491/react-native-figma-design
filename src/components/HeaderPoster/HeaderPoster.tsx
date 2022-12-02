@@ -1,6 +1,10 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {image_02} from '../../constants/images';
+import {SIZES} from '../../constants';
+import {FontIos} from '../../constants/theme';
+
+const marginDistance = (SIZES.width - 337) / 3;
 
 const HeaderPoster = () => {
   return (
@@ -19,12 +23,11 @@ const styles = StyleSheet.create({
   container: {
     top: 20,
     flexDirection: 'row',
-    marginHorizontal: 15,
-    marginLeft: 30,
-
+    marginLeft: marginDistance,
+    marginBottom: marginDistance,
   },
   contextContainer: {
-    marginLeft: 10,
+    marginLeft: marginDistance / 2,
   },
   image: {
     width: 126,
@@ -45,19 +48,21 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 19,
     color: '#000',
+    fontFamily: FontIos,
   },
   text_02: {
     lineHeight: 30,
     fontWeight: '500',
     fontSize: 22,
     color: '#007AFE',
+    fontFamily: FontIos,
   },
   text_03: {
     lineHeight: 18,
-    color:"#898A8D",
-    fontWeight:"700",
-    fontSize:11,
-    
+    color: '#898A8D',
+    fontWeight: '700',
+    fontSize: 11,
+    fontFamily: FontIos,
   },
 });
 export default HeaderPoster;
