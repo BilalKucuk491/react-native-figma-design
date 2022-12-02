@@ -22,8 +22,11 @@ const RowComponent = ({
   return (
     <View style={styles.rowContainer}>
       <View style={styles.tinyIconContainer}>
-      {iconName == icons.dialog ? (
-          <Image style={{...styles.tinyIcon,marginLeft:20,marginRight:-20}} source={iconName} />
+        {iconName == icons.dialog ? (
+          <Image
+            style={{...styles.tinyIcon, marginLeft: 20, marginRight: -20}}
+            source={iconName}
+          />
         ) : (
           <Image style={styles.tinyIcon} source={iconName} />
         )}
@@ -42,12 +45,15 @@ const RowComponent = ({
         )}
       </View>
       <View style={styles.textContainer}>
-        <Text style={styles.text}>{title}</Text>
-        {lastLine && <View style={styles.smallSeperator} />}
-      </View>
-
-      <View style={styles.threeDotsContainer}>
-        <Image style={styles.threeDots} source={icons.blackDots} />
+        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <Text style={styles.text}>{title}</Text>
+          <View style={styles.threeDotsContainer}>
+            <Text style={styles.threeDots}>...</Text>
+          </View>
+        </View>
+        {lastLine && (
+          <View style={{...styles.smallSeperator, marginBottom: 15}} />
+        )}
       </View>
     </View>
   );
@@ -73,7 +79,7 @@ const Context = () => {
           iconName={icons.tinyStar}
           lastLine={false}
         />
-        <View style={{...styles.normalSeperator, bottom: 20}} />
+        <View style={{...styles.normalSeperator, marginTop: 20, bottom: 15}} />
       </View>
 
       <View style={styles.container}>
@@ -93,7 +99,7 @@ const Context = () => {
           iconName={icons.tinyStar}
           lastLine={false}
         />
-        <View style={{...styles.normalSeperator, bottom: 20}} />
+        <View style={{...styles.normalSeperator, marginTop: 20, bottom: 15}} />
       </View>
 
       <View style={styles.container}>
@@ -109,7 +115,7 @@ const Context = () => {
         <RowComponent num={8} title="Beschreibung/Wirkung" />
         <RowComponent num={9} title="Synonyme" />
         <RowComponent num={10} title="Sprachliche Mittel" lastLine={false} />
-        <View style={{...styles.normalSeperator, bottom: 20}} />
+        <View style={{...styles.normalSeperator, marginTop: 20, bottom: 15}} />
       </View>
 
       <View style={styles.container}>
@@ -138,7 +144,7 @@ const Context = () => {
           title="Moderne (2000er Jahre) "
           lastLine={false}
         />
-        <View style={{...styles.normalSeperator, bottom: 20}} />
+        <View style={{...styles.normalSeperator, marginTop: 20, bottom: 15}} />
       </View>
 
       <View style={styles.container}>
@@ -167,7 +173,7 @@ const Context = () => {
           iconName={icons.dialog}
           lastLine={false}
         />
-        <View style={{...styles.normalSeperator, bottom: 20}} />
+        <View style={{...styles.normalSeperator, marginTop: 20, bottom: 15}} />
       </View>
     </>
   );
@@ -216,7 +222,7 @@ const styles = StyleSheet.create({
   tinyIconContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: marginDistance,
+    marginBottom: marginDistance * 1.2,
   },
   tinyIcon: {},
   numberContainer: {
@@ -229,10 +235,13 @@ const styles = StyleSheet.create({
   },
   text: {},
   threeDotsContainer: {
-    marginBottom: marginDistance,
     marginRight: SIZES.width / 16.7 / 1.5,
+    bottom: 10,
   },
-  threeDots: {},
+  threeDots: {
+    fontSize: 25,
+    color: '#000',
+  },
 });
 
 export default Context;
