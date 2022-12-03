@@ -82,11 +82,12 @@ const Formulierungshilfen = () => {
           {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
         </View>
         <View style={styles.numContainer}>
-          <Text style={styles.numText}>9</Text>
+          <Text style={styles.numText}>10</Text>
         </View>
         <View style={styles.partContainer}>
-          <View style={styles.textContainer}>
-            <Text style={styles.text}>Synonyme</Text>
+    
+          <View style={{marginLeft: marginDistance * 0.30}}>
+            <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
           <View style={{justifyContent: 'center'}}>
             <Image source={icons.blackDots} />

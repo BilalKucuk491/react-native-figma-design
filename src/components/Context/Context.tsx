@@ -15,14 +15,12 @@ const Context = () => {
   return (
     <View style={styles.container}>
       <FormelleStruktur />
-      
+
       <FormalerAufbau />
       <Formulierungshilfen />
       <EpochenDerNaturlyrik />
-      
-      {/* <FormalerAufbau />
-      <Formulierungshilfen />
-      <EpochenDerNaturlyrik />
+
+      {/* 
       <AlsWichtigMarkierteInfos /> */}
     </View>
   );
