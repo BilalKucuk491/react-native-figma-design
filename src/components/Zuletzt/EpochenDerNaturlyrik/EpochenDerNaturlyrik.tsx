@@ -16,9 +16,9 @@ const EpochenDerNaturlyrik = () => {
       {/* part 1 */}
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Image style={styles.icon} source={icons.tinyStar} />
         </View>
-        <View style={styles.numContainer}>
+        <View style={{...styles.numContainer, marginLeft: 5}}>
           <Text style={styles.numText}>11</Text>
         </View>
         <View style={styles.partContainer}>
@@ -58,9 +58,9 @@ const EpochenDerNaturlyrik = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Image style={styles.icon} source={icons.tinyStar} />
         </View>
-        <View style={styles.numContainer}>
+        <View style={{...styles.numContainer, marginLeft: 5}}>
           <Text style={styles.numText}>13</Text>
         </View>
         <View style={styles.partContainer}>

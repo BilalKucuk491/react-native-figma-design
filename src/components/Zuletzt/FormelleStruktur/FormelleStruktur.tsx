@@ -4,7 +4,6 @@ import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
 const marginDistance = (SIZES.width - 337) / 3;
 
-
 const FormelleStruktur = () => {
   return (
     <View style={styles.container}>
@@ -73,15 +72,13 @@ const FormelleStruktur = () => {
       </View>
 
       <View style={styles.middleLine} />
-
-
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container:{
-    marginBottom:marginDistance*2
+  container: {
+    marginBottom: marginDistance * 2,
   },
   headerContextContainer: {
     marginLeft: marginDistance,
@@ -112,13 +109,13 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   iconContainer: {
-    marginLeft: 2,
+    marginLeft: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   icon: {},
   numContainer: {
-    marginLeft: SIZES.width / 24,
+    marginLeft: SIZES.width / 45,
   },
   numText: {
     fontFamily: FontIos,
