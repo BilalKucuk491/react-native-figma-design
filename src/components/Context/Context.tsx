@@ -14,14 +14,13 @@ const marginDistance = (SIZES.width - 337) / 3;
 const Context = () => {
   return (
     <View style={styles.container}>
+      
       <FormelleStruktur />
-
       <FormalerAufbau />
       <Formulierungshilfen />
       <EpochenDerNaturlyrik />
+      <AlsWichtigMarkierteInfos />
 
-      {/* 
-      <AlsWichtigMarkierteInfos /> */}
     </View>
   );
 };
