@@ -1,8 +1,6 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import React from 'react';
-import dummyContext from '../../assets/Data/dummyContext';
-import {icons, SIZES} from '../../constants';
-import {FontIos} from '../../constants/theme';
+import {SIZES} from '../../constants';
 import FormelleStruktur from '../Zuletzt/FormelleStruktur';
 import FormalerAufbau from '../Zuletzt/FormalerAufbau';
 import Formulierungshilfen from '../Zuletzt/Formulierungshilfen';

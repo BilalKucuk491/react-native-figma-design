@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
+import TreeDot from '../../TreeDot/TreeDot';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const Formulierungshilfen = () => {
@@ -25,9 +26,8 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Satzanfänge</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -46,9 +46,8 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Beschreibung/Wirkung</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -67,9 +66,8 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Synonyme</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -89,9 +87,8 @@ const Formulierungshilfen = () => {
           <View style={{marginLeft: marginDistance * 0.30}}>
             <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 

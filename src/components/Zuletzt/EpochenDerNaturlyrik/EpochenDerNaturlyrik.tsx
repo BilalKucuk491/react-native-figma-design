@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
+import TreeDot from '../../TreeDot/TreeDot';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const EpochenDerNaturlyrik = () => {
@@ -25,9 +26,8 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Sturm und Drang (1773-1784)</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -46,9 +46,8 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Romantik (1785-1835)</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -67,9 +66,8 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Realismus (1830-1890)</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -88,9 +86,8 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Expressionismus (1910-1924)</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -109,9 +106,8 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Moderne (2000er Jahre)</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 

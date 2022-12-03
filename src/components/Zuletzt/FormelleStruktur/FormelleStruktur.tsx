@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
+import TreeDot from '../../TreeDot/TreeDot';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const FormelleStruktur = () => {
@@ -25,9 +26,7 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Einleitung</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
         </View>
       </View>
 
@@ -46,9 +45,8 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Hauptteil</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -65,9 +63,8 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Schluss</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 

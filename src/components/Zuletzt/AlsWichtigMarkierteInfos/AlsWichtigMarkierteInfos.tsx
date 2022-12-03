@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
+import TreeDot from '../../TreeDot/TreeDot';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const AlsWichtigMarkierteInfos = () => {
@@ -25,9 +26,8 @@ const AlsWichtigMarkierteInfos = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Tatte: Textart, Auto, Titel, Them...</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -46,9 +46,8 @@ const AlsWichtigMarkierteInfos = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Deckungshypothese, Vermutun...</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -67,9 +66,8 @@ const AlsWichtigMarkierteInfos = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Inhaltsangabe, Kurze Zusamme... </Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 
@@ -88,9 +86,8 @@ const AlsWichtigMarkierteInfos = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
-          <View style={{justifyContent: 'center'}}>
-            <Image source={icons.blackDots} />
-          </View>
+          <TreeDot/>
+
         </View>
       </View>
 

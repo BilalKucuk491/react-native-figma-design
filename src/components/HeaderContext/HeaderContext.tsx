@@ -1,7 +1,8 @@
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {icons} from '../../constants';
 import {FontIos} from '../../constants/theme';
+
 const HeaderContext = () => {
   return (
     <View style={{marginTop: 50}}>
@@ -14,9 +15,13 @@ const HeaderContext = () => {
           <View style={{...styles.circle, marginRight: 10}}>
             <Image style={styles.icon} source={icons.plus} />
           </View>
-          <View style={styles.circle}>
-            <Image style={styles.icon} source={icons.treeDots} />
-          </View>
+
+          <TouchableOpacity onPress={()=> console.log("Merhaba")}>
+            <View style={styles.circle}>
+              <Image style={styles.icon} source={icons.treeDots} />
+            </View>
+          </TouchableOpacity>
+
         </View>
       </View>
     </View>

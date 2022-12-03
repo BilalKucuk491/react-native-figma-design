@@ -13,7 +13,6 @@ const ZuletztScreen = () => {
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <HeaderPoster />
-
         <Context />
       </ScrollView>
 
