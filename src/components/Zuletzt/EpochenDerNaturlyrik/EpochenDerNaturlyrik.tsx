@@ -31,7 +31,7 @@ const EpochenDerNaturlyrik = () => {
         </View>
       </View>
 
-      <View style={styles.middleLine} />
+      <View style={styles.subLine} />
 
       {/* part 2       */}
 
@@ -52,7 +52,7 @@ const EpochenDerNaturlyrik = () => {
         </View>
       </View>
 
-      <View style={styles.middleLine} />
+      <View style={styles.subLine} />
 
       {/* part 3 */}
 
@@ -73,7 +73,7 @@ const EpochenDerNaturlyrik = () => {
         </View>
       </View>
 
-      <View style={styles.middleLine} />
+      <View style={styles.subLine} />
 
       {/* part 4 */}
 
@@ -94,7 +94,7 @@ const EpochenDerNaturlyrik = () => {
         </View>
       </View>
 
-      <View style={styles.middleLine} />
+      <View style={styles.subLine} />
 
       {/* part 5 */}
 
@@ -182,6 +182,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#C6C6C8',
     marginTop: 16,
     marginLeft: marginDistance,
+  },
+  subLine: {
+    flex: 1,
+    height: 1.2,
+    backgroundColor: '#C6C6C8',
+    marginTop: 16,
+    marginLeft: marginDistance*2,
   },
   partContainer: {
     flex: 1,
