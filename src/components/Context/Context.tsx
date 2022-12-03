@@ -17,6 +17,8 @@ const Context = () => {
       <FormelleStruktur />
       
       <FormalerAufbau />
+      <Formulierungshilfen />
+      <EpochenDerNaturlyrik />
       
       {/* <FormalerAufbau />
       <Formulierungshilfen />
