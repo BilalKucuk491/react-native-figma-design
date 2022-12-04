@@ -13,7 +13,7 @@ const ContentMenuOption = () => {
 
   return (
     <TouchableOpacity onPress={() => setModalVisibility(!modalVisibility)}>
-      <View style={modalVisibility ? styles.container_01 : styles.container_02}>
+      <View style={styles.circleContainer}>
         <Image source={icons.blackDots} />
       </View>
       {modalVisibility && (
@@ -44,16 +44,11 @@ const ContentMenuOption = () => {
 };
 
 const styles = StyleSheet.create({
-  container_01: {
-    borderRadius: 30,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#d3d3d9',
-  },
-  container_02: {
+  circleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   MenuOptions: {
     borderRadius: 10,
     width: 250,
