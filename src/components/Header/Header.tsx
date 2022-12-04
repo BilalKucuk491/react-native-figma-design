@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   navbarIconContainer: {
-    backgroundColor: '#d3d3d9',
+    backgroundColor: 'rgba(211, 211, 217, 0.4)',
     marginRight: (SIZES.width - 165 * 2) / 3,
     width: 38,
     height: 38,

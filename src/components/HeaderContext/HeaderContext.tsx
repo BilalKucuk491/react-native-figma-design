@@ -1,7 +1,8 @@
-import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
 import {icons} from '../../constants';
 import {FontIos} from '../../constants/theme';
+import HeaderMenuOption from '../HeaderMenuOption';
 
 const HeaderContext = () => {
   return (
@@ -16,11 +17,13 @@ const HeaderContext = () => {
             <Image style={styles.icon} source={icons.plus} />
           </View>
 
-          <TouchableOpacity onPress={()=> console.log("Merhaba")}>
+          {/* <TouchableOpacity onPress={()=> console.log("Merhaba")}>
             <View style={styles.circle}>
               <Image style={styles.icon} source={icons.treeDots} />
             </View>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
+
+          <HeaderMenuOption/>
 
         </View>
       </View>
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
   circle: {
     width: 28,
     height: 28,
-    backgroundColor: '#d3d3d9',
+    backgroundColor: 'rgba(211, 211, 217, 0.4)',
     borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',

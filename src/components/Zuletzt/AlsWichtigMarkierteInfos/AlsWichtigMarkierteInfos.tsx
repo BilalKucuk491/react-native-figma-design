@@ -2,7 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
-import TreeDot from '../../TreeDot/TreeDot';
+import TreeDot from '../../ContentMenuOption/ContentMenuOption';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const AlsWichtigMarkierteInfos = () => {
