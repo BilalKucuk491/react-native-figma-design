@@ -4,7 +4,6 @@ import {FONTS, COLORS} from '../../constants/index';
 import { TabIconInterface } from '../../types/TabIconInterface';
 
 
-
 const TabIcon = ({
   focused,
   icon,

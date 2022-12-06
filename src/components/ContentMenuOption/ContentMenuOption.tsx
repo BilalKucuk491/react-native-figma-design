@@ -19,13 +19,13 @@ const ContentMenuOption = () => {
       {modalVisibility && (
         <Menu opened={modalVisibility}>
           <MenuTrigger />
-          <MenuOptions optionsContainerStyle={styles.MenuOptions}>
+          <MenuOptions optionsContainerStyle={styles.menuOptions}>
             <MenuOption
               style={styles.menuOptionContainer}
               onSelect={() => setModalVisibility(!modalVisibility)}>
               <Text style={styles.menuOptionText}>Als wichtig markieren</Text>
               <Image style={styles.menuOptionIcon} source={icons.starOutline} />
-            </MenuOption>
+            </MenuOption> 
             <View style={{height: 1, backgroundColor: '#C6C6C8'}} />
             <MenuOption
               style={styles.menuOptionContainer}
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  MenuOptions: {
+  menuOptions: {
     borderRadius: 10,
     width: 250,
     height: 88,

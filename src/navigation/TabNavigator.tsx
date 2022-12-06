@@ -2,9 +2,19 @@ import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {TabIcon} from '../components/TabIcon';
-import { icons } from '../constants';
-import {GespeichertScreen, SpiritScreen,SuchenScreen,ZuletztScreen} from '../screens';
-
+import {icons} from '../constants';
+import {
+  GespeichertScreen,
+  SpiritScreen,
+  SuchenScreen,
+  ZuletztScreen,
+} from '../screens';
+import {Gespeichert, Person, Suchen, Zuletzt} from '../assets/newicons';
+import {Text} from 'react-native-svg';
+import Zuletzt2 from '../assets/newicons/Zuletzt2';
+import Gespeichert2 from '../assets/newicons/Gespeichert2';
+import Suchen2 from '../assets/newicons/Suchen2';
+import Person2 from '../assets/newicons/Person2';
 
 const Tab = createBottomTabNavigator();
 export interface TabBarCustomButtonInterface {
@@ -12,25 +22,7 @@ export interface TabBarCustomButtonInterface {
   onPress: any;
 }
 
-const TabBarCustomButton = ({
-  children,
-  onPress,
-}: TabBarCustomButtonInterface) => {
-  return (
-    <TouchableOpacity
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-      onPress={onPress}>
-      {children}
-    </TouchableOpacity>
-  );
-};
-
 const TabNavigator = () => {
-
   const [isModalVisible, setTradeVisibility] = useState(false);
 
   return (
@@ -41,7 +33,7 @@ const TabNavigator = () => {
         tabBarHideOnKeyboard: true,
         tabBarStyle: {
           height: 80,
-          backgroundColor: "#e9e5e5",
+          backgroundColor: '#e9e5e5',
           borderTopColor: 'transparent',
         },
       }}>
@@ -50,7 +42,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <TabIcon focused={focused} icon={icons.zuletzt} label="Zuletzt" />
+                <>
+                {focused == true ? <Zuletzt2 /> : <Zuletzt />}
+                </>
               );
             }
           },
@@ -70,11 +64,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <TabIcon
-                  focused={focused}
-                  icon={icons.gespeichert}
-                  label="Gespeichert"
-                />
+                <>
+                {focused == true ? <Gespeichert /> : <Gespeichert2 />}
+                </>
               );
             }
           },
@@ -95,11 +87,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <TabIcon
-                  focused={focused}
-                  icon={icons.suchen}
-                  label="Suchen"
-                />
+                <>
+                {focused == true ? <Suchen2 /> : <Suchen />}
+                </>
               );
             }
           },
@@ -119,11 +109,9 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <TabIcon
-                  focused={focused}
-                  icon={icons.person}
-                  label="Spirit"
-                />
+                <>
+                {focused == true ? <Person2 /> : <Person />}
+                </>
               );
             }
           },

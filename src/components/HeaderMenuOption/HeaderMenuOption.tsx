@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   menuOptions: {
     borderRadius: 10,
     width: 264,
-    height: 140,
+    height: 141,
     marginLeft: SIZES.width / 20,
     marginTop: SIZES.width / 10,
   },

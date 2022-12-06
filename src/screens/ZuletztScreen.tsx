@@ -9,7 +9,7 @@ import Context from '../components/Context';
 const ZuletztScreen = () => {
   return (
     <>
-      <HeaderContext />
+      <HeaderContext  />
 
       <ScrollView showsVerticalScrollIndicator={false}>
         <HeaderPoster />
