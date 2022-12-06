@@ -34,7 +34,7 @@ const HeaderContext = () => {
 };
 const styles = StyleSheet.create({
   mainContainer:{
-    marginTop:verticalScale(61)
+    marginTop:verticalScale(61),
   },
   container: {
     flexDirection: 'row',
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     backgroundColor: 'rgba(211, 211, 217, 0.4)',
-    borderRadius: 28,
+    borderRadius: 56,
     justifyContent: 'center',
     alignItems: 'center',
   },

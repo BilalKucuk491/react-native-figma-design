@@ -9,8 +9,8 @@ import {
 } from 'react-native-popup-menu';
 import {FontIos} from '../../constants/theme';
 import { FolderOutline, Plus, ShareOutline, TreeDots } from '../../assets/newicons';
+import Plus2 from "../../assets/newicons/Plus2"
 import { verticalScale } from '../../constants/metrics';
-import Plus2 from '../../assets/newicons/Plus2';
 const HeaderMenuOption = () => {
   const [modalVisibility, setModalVisibility] = useState(false);
 
@@ -27,7 +27,7 @@ const HeaderMenuOption = () => {
               style={styles.menuOptionContainer}
               onSelect={() => setModalVisibility(!modalVisibility)}>
               <Text style={styles.menuOptionText}>Thema Speichern</Text>
-              <View style={styles.menuOptionIcon}>
+             <View style={{...styles.menuOptionIcon, marginRight:verticalScale(5)}}>
                 <Plus2/>
               </View>
             </MenuOption>

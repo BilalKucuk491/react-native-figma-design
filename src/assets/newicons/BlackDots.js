@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
 import {memo} from 'react';
-const SvgTreeDots = props => (
+const SvgBlackDots = props => (
   <Svg
     width="18"
     height="18"
@@ -16,5 +16,5 @@ const SvgTreeDots = props => (
     />
   </Svg>
 );
-const Memo = memo(SvgTreeDots);
+const Memo = memo(SvgBlackDots);
 export default Memo;

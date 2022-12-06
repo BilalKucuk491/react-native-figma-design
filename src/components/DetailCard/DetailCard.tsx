@@ -1,15 +1,21 @@
 import {View, Text, Image, StyleSheet} from 'react-native';
 import React from 'react';
-import {images, SIZES} from '../../constants/index';
-import {CardInterface} from '../../types/CardInterface';
+import {SIZES} from '../../constants/index';
 import dummyData from '../../assets/Data/dummyData';
 import {FontIos} from '../../constants/theme';
+import {verticalScale} from '../../constants/metrics';
+import {DropShadowBase} from 'react-native-drop-shadow';
+import {Platform} from 'react-native';
+
 
 const DetailCard = () => {
   return (
     <View style={{height: 65, bottom: 0}}>
       <View style={styles.container}>
+      <View style={styles.shadowImageContainer}>
         <Image source={dummyData[4].image_path} style={styles.image} />
+
+        </View>
 
         <View style={styles.HeaderContainer}>
           <View style={styles.TitleContainer}>
@@ -38,7 +44,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: '#e9e5e5',
     position: 'absolute',
-    bottom: 0,
+    bottom: verticalScale(0),
     width: SIZES.width,
     height: 65,
     justifyContent: 'center',
@@ -49,6 +55,20 @@ const styles = StyleSheet.create({
     width: 44,
     borderWidth: 1,
     borderRadius: 10,
+  },
+  shadowImageContainer:{
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 8.0,
+
+    elevation:24,
+    borderRadius: 10,
+    backgroundColor:"red",
+
   },
   imageTitle: {
     color: '#000',
