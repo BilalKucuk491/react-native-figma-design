@@ -2,9 +2,9 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
-import TreeDot from '../../ContentMenuOption/ContentMenuOption';
+import ContentMenuOption from '../../ContentMenuOption/ContentMenuOption';
 import {Dialog} from '../../../assets/newicons';
-const marginDistance = (SIZES.width - 337) / 3;
+import {horizontalScale, verticalScale} from '../../../constants/metrics';
 
 const AlsWichtigMarkierteInfos = () => {
   return (
@@ -18,20 +18,14 @@ const AlsWichtigMarkierteInfos = () => {
       {/* part 1 */}
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Dialog />
         </View>
-        <View style={styles.numContainer}>
-          <View style={styles.icon}>
-            <Dialog />
-          </View>
-        </View>
+
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
-            <Text style={styles.text}>
-              Tatte: Textart, Auto, Titel, Them...
-            </Text>
+            <Text style={styles.text}>Tatte: Textart, Auto, Titel, Them...</Text>
           </View>
-          <TreeDot />
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -41,18 +35,14 @@ const AlsWichtigMarkierteInfos = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Dialog />
         </View>
-        <View style={styles.numContainer}>
-          <View style={styles.icon}>
-            <Dialog />
-          </View>
-        </View>
+
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Deckungshypothese, Vermutun...</Text>
           </View>
-          <TreeDot />
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -62,18 +52,14 @@ const AlsWichtigMarkierteInfos = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Dialog />
         </View>
-        <View style={styles.numContainer}>
-          <View style={styles.icon}>
-            <Dialog />
-          </View>
-        </View>
+
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Inhaltsangabe, Kurze Zusamme... </Text>
+            <Text style={styles.text}>Inhaltsangabe, Kurze Zusamme...</Text>
           </View>
-          <TreeDot />
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -83,18 +69,14 @@ const AlsWichtigMarkierteInfos = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
+          <Dialog />
         </View>
-        <View style={styles.numContainer}>
-          <View style={styles.icon}>
-            <Dialog />
-          </View>
-        </View>
+
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
-          <TreeDot />
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -105,10 +87,10 @@ const AlsWichtigMarkierteInfos = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: marginDistance * 2,
+    marginBottom: verticalScale(50),
   },
   headerContextContainer: {
-    marginLeft: marginDistance,
+    marginLeft: horizontalScale(20),
   },
   title: {
     fontFamily: FontIos,
@@ -123,29 +105,23 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 15,
     color: '#989898',
-    marginTop: 8,
+    marginTop: verticalScale(4),
   },
   subTitleLine: {
     height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 6,
+    marginTop: verticalScale(4),
   },
   contextContainer: {
     flexDirection: 'row',
-    marginLeft: marginDistance / 5,
-    marginTop: 16,
+    marginTop: verticalScale(14),
+    marginLeft: horizontalScale(22),
   },
   iconContainer: {
-    marginLeft: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  icon: {
-    marginTop: '5%',
-  },
-  numContainer: {
-    marginLeft: SIZES.width / 24,
-  },
+  numContainer: {},
   numText: {
     fontFamily: FontIos,
     fontWeight: '400',
@@ -153,7 +129,7 @@ const styles = StyleSheet.create({
     color: '#898A8D',
   },
   textContainer: {
-    marginLeft: marginDistance * 0.3,
+    marginLeft: horizontalScale(14),
   },
   text: {
     fontFamily: FontIos,
@@ -163,23 +139,23 @@ const styles = StyleSheet.create({
   },
   middleLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance,
+    marginTop: verticalScale(14),
+    marginLeft: horizontalScale(22),
   },
   subLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance * 2,
+    marginTop: verticalScale(13),
+    marginLeft: horizontalScale(52),
   },
   partContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 20,
+    marginRight: horizontalScale(21),
   },
 });
 

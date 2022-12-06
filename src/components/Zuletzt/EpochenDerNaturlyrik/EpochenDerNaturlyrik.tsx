@@ -2,15 +2,15 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
-import TreeDot from '../../ContentMenuOption/ContentMenuOption';
-import { TinyStar } from '../../../assets/newicons';
-const marginDistance = (SIZES.width - 337) / 3;
+import ContentMenuOption from '../../ContentMenuOption/ContentMenuOption';
+import {TinyStar} from '../../../assets/newicons';
+import { horizontalScale, verticalScale } from '../../../constants/metrics';
 
 const EpochenDerNaturlyrik = () => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContextContainer}>
-        <Text style={styles.title}>Formulierungshilfen</Text>
+        <Text style={styles.title}>Epochen der Naturlyrik</Text>
         <Text style={styles.subTitle}>Von Naturlyrik: Gedichtsanalyse</Text>
         <View style={styles.subTitleLine} />
       </View>
@@ -18,17 +18,16 @@ const EpochenDerNaturlyrik = () => {
       {/* part 1 */}
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <TinyStar/>
+          <TinyStar />
         </View>
-        <View style={{...styles.numContainer, marginLeft: 5}}>
+        <View >
           <Text style={styles.numText}>11</Text>
         </View>
         <View style={styles.partContainer}>
-          <View style={styles.textContainer}>
+        <View style={{marginLeft: horizontalScale(12)}}>
             <Text style={styles.text}>Sturm und Drang (1773-1784)</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -37,18 +36,15 @@ const EpochenDerNaturlyrik = () => {
       {/* part 2       */}
 
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
-        <View style={styles.numContainer}>
+        <View style={{marginLeft:horizontalScale(8)}}>
           <Text style={styles.numText}>12</Text>
         </View>
         <View style={styles.partContainer}>
+    
           <View style={styles.textContainer}>
             <Text style={styles.text}>Romantik (1785-1835)</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -58,49 +54,42 @@ const EpochenDerNaturlyrik = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-        <TinyStar/>
-
+          <TinyStar />
         </View>
-        <View style={{...styles.numContainer, marginLeft: 5}}>
+        <View >
           <Text style={styles.numText}>13</Text>
         </View>
         <View style={styles.partContainer}>
+    
           <View style={styles.textContainer}>
             <Text style={styles.text}>Realismus (1830-1890)</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
       <View style={styles.subLine} />
 
-      {/* part 4 */}
+      {/* part 4       */}
 
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>14</Text>
         </View>
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Expressionismus (1910-1924)</Text>
+            <Text style={styles.text}>Expressionismus (1910-1924) </Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
       <View style={styles.subLine} />
 
-      {/* part 5 */}
+
+      {/* part 5  */}
 
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>15</Text>
         </View>
@@ -108,22 +97,22 @@ const EpochenDerNaturlyrik = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Moderne (2000er Jahre)</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
       <View style={styles.middleLine} />
+
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: marginDistance * 2,
+    marginBottom: verticalScale(50),
   },
   headerContextContainer: {
-    marginLeft: marginDistance,
+    marginLeft: horizontalScale(20),
   },
   title: {
     fontFamily: FontIos,
@@ -138,26 +127,27 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 15,
     color: '#989898',
-    marginTop: 8,
+    marginTop: verticalScale(4),
   },
   subTitleLine: {
     height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 6,
+    marginTop: verticalScale(4),
   },
   contextContainer: {
     flexDirection: 'row',
-    marginLeft: marginDistance / 5,
-    marginTop: 16,
+    marginTop: verticalScale(14),
+    marginLeft:horizontalScale(11)
   },
   iconContainer: {
-    marginLeft: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft:-horizontalScale(6.31),
+    marginRight:horizontalScale(6.37),
+    marginTop:-verticalScale(5),
   },
-  icon: {},
   numContainer: {
-    marginLeft: SIZES.width / 24,
+    marginLeft:horizontalScale(8)
   },
   numText: {
     fontFamily: FontIos,
@@ -166,7 +156,7 @@ const styles = StyleSheet.create({
     color: '#898A8D',
   },
   textContainer: {
-    marginLeft: marginDistance * 0.35,
+    marginLeft: horizontalScale(12),
   },
   text: {
     fontFamily: FontIos,
@@ -176,23 +166,24 @@ const styles = StyleSheet.create({
   },
   middleLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance,
+    marginTop: verticalScale(14),
+    marginLeft: horizontalScale(20),
   },
   subLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance*2,
+    marginTop: verticalScale(13),
+    marginLeft: horizontalScale(46),
+
   },
   partContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 20,
+    marginRight: horizontalScale(21),
   },
 });
 
