@@ -3,6 +3,7 @@ import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
 import TreeDot from '../../ContentMenuOption/ContentMenuOption';
+import {Dialog} from '../../../assets/newicons';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const AlsWichtigMarkierteInfos = () => {
@@ -20,14 +21,17 @@ const AlsWichtigMarkierteInfos = () => {
           {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
         </View>
         <View style={styles.numContainer}>
-          <Image style={styles.icon} source={icons.dialog} />
+          <View style={styles.icon}>
+            <Dialog />
+          </View>
         </View>
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
-            <Text style={styles.text}>Tatte: Textart, Auto, Titel, Them...</Text>
+            <Text style={styles.text}>
+              Tatte: Textart, Auto, Titel, Them...
+            </Text>
           </View>
-          <TreeDot/>
-
+          <TreeDot />
         </View>
       </View>
 
@@ -40,14 +44,15 @@ const AlsWichtigMarkierteInfos = () => {
           {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
         </View>
         <View style={styles.numContainer}>
-          <Image style={styles.icon} source={icons.dialog} />
+          <View style={styles.icon}>
+            <Dialog />
+          </View>
         </View>
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Deckungshypothese, Vermutun...</Text>
           </View>
-          <TreeDot/>
-
+          <TreeDot />
         </View>
       </View>
 
@@ -60,14 +65,15 @@ const AlsWichtigMarkierteInfos = () => {
           {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
         </View>
         <View style={styles.numContainer}>
-          <Image style={styles.icon} source={icons.dialog} />
+          <View style={styles.icon}>
+            <Dialog />
+          </View>
         </View>
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Inhaltsangabe, Kurze Zusamme... </Text>
           </View>
-          <TreeDot/>
-
+          <TreeDot />
         </View>
       </View>
 
@@ -80,14 +86,15 @@ const AlsWichtigMarkierteInfos = () => {
           {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
         </View>
         <View style={styles.numContainer}>
-          <Image style={styles.icon} source={icons.dialog} />
+          <View style={styles.icon}>
+            <Dialog />
+          </View>
         </View>
         <View style={styles.partContainer}>
           <View style={styles.textContainer}>
             <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
-          <TreeDot/>
-
+          <TreeDot />
         </View>
       </View>
 
@@ -134,7 +141,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   icon: {
-    marginTop:5
+    marginTop: '5%',
   },
   numContainer: {
     marginLeft: SIZES.width / 24,
@@ -166,7 +173,7 @@ const styles = StyleSheet.create({
     height: 1.2,
     backgroundColor: '#C6C6C8',
     marginTop: 16,
-    marginLeft: marginDistance*2,
+    marginLeft: marginDistance * 2,
   },
   partContainer: {
     flex: 1,

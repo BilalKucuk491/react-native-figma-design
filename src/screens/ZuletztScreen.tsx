@@ -26,10 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
-  detailCardContainer: {
-    height: 65,
-    bottom: 0,
-  },
 });
 
 export default ZuletztScreen;

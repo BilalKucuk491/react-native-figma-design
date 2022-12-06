@@ -8,13 +8,16 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 import {FontIos} from '../../constants/theme';
+import { FolderOutline, Plus, ShareOutline, TreeDots } from '../../assets/newicons';
+import { verticalScale } from '../../constants/metrics';
+import Plus2 from '../../assets/newicons/Plus2';
 const HeaderMenuOption = () => {
   const [modalVisibility, setModalVisibility] = useState(false);
 
   return (
     <TouchableOpacity onPress={() => setModalVisibility(!modalVisibility)}>
       <View style={styles.circleContainer}>
-        <Image style={styles.icon} source={icons.treeDots} />
+        <TreeDots/>
       </View>
       {modalVisibility && (
         <Menu opened={modalVisibility}>
@@ -24,27 +27,27 @@ const HeaderMenuOption = () => {
               style={styles.menuOptionContainer}
               onSelect={() => setModalVisibility(!modalVisibility)}>
               <Text style={styles.menuOptionText}>Thema Speichern</Text>
-              <Image style={styles.menuOptionIcon} source={icons.plus} />
+              <View style={styles.menuOptionIcon}>
+                <Plus2/>
+              </View>
             </MenuOption>
             <View style={{height: 1, backgroundColor: '#C6C6C8'}} />
             <MenuOption
               style={styles.menuOptionContainer}
               onSelect={() => setModalVisibility(!modalVisibility)}>
               <Text style={styles.menuOptionText}>Zu Ordner hinzufügen...</Text>
-              <Image
-                style={styles.menuOptionIcon}
-                source={icons.folderOutline}
-              />
+              <View style={styles.menuOptionIcon}>
+                <FolderOutline/>
+              </View>
             </MenuOption>
-            <View style={{height: 8, backgroundColor: 'rgba(207, 206, 209, 0.4)'}} />
+            <View style={{height: verticalScale(8), backgroundColor: 'rgba(207, 206, 209, 0.4)'}} />
             <MenuOption
               style={styles.menuOptionContainer}
               onSelect={() => setModalVisibility(!modalVisibility)}>
               <Text style={styles.menuOptionText}>Thema teilen</Text>
-              <Image
-                style={styles.menuOptionIcon}
-                source={icons.shareOutline}
-              />
+              <View style={styles.menuOptionIcon}>
+                <ShareOutline/>
+              </View>
             </MenuOption>
           </MenuOptions>
         </Menu>
@@ -62,16 +65,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  icon: {
-    width: 10,
-    height: 10,
-  },
   menuOptions: {
     borderRadius: 10,
     width: 264,
     height: 141,
-    marginLeft: SIZES.width / 20,
-    marginTop: SIZES.width / 10,
+    marginLeft: "6%",
+    marginTop: verticalScale(45),
   },
   menuOptionContainer: {
     flexDirection: 'row',

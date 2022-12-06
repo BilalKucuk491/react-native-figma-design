@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "svgr": "svgr ./src/assets/icons -d ./src/assets/newicons --native --icon --memo --svg-props \"className,width=25,height=25\""
+    "svgr": "svgr ./src/assets/icons -d ./src/assets/newicons --native --icon --memo --svg-props \"className,width=25,height=25\"",
+    "svgrImage": "svgr ./src/assets/images -d ./src/assets/newimages --native --icon --memo --svg-props \"className,width=165,height=165\""
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.11",

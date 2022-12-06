@@ -1,23 +1,23 @@
 import * as React from 'react';
 import Svg, {Path} from 'react-native-svg';
 import {memo} from 'react';
-const SvgNavbar = props => (
+const SvgPlus2 = props => (
   <Svg
-    width="15"
-    height="15"
-    viewBox="0 0 16 10"
+    width="20"
+    height="20"
+    viewBox="0 0 14 14"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className
     {...props}>
     <Path
-      d="M1.125 1.25h13.75M3.273 5h9.434M5.402 8.75h5.215"
-      stroke="#007AFE"
-      strokeWidth={1.5}
-      strokeMiterlimit={10}
+      d="M7 1.938v10.124M12.063 7H1.937"
+      stroke="#000"
+      strokeWidth={2}
       strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Svg>
 );
-const Memo = memo(SvgNavbar);
+const Memo = memo(SvgPlus2);
 export default Memo;

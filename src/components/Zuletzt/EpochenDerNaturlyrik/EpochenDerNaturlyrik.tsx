@@ -3,6 +3,7 @@ import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
 import TreeDot from '../../ContentMenuOption/ContentMenuOption';
+import { TinyStar } from '../../../assets/newicons';
 const marginDistance = (SIZES.width - 337) / 3;
 
 const EpochenDerNaturlyrik = () => {
@@ -17,7 +18,7 @@ const EpochenDerNaturlyrik = () => {
       {/* part 1 */}
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <Image style={styles.icon} source={icons.tinyStar} />
+          <TinyStar/>
         </View>
         <View style={{...styles.numContainer, marginLeft: 5}}>
           <Text style={styles.numText}>11</Text>
@@ -57,7 +58,8 @@ const EpochenDerNaturlyrik = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <Image style={styles.icon} source={icons.tinyStar} />
+        <TinyStar/>
+
         </View>
         <View style={{...styles.numContainer, marginLeft: 5}}>
           <Text style={styles.numText}>13</Text>

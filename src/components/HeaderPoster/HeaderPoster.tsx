@@ -3,13 +3,14 @@ import React from 'react';
 import {image_02} from '../../constants/images';
 import {SIZES} from '../../constants';
 import {FontIos} from '../../constants/theme';
+import {Image06 } from '../../assets/newimages';
+import { horizontalScale, verticalScale } from '../../constants/metrics';
 
-const marginDistance = (SIZES.width - 337) / 3;
 
 const HeaderPoster = () => {
   return (
     <View style={styles.container}>
-      <Image style={styles.image} source={image_02} />
+       <Image style={styles.image} source={image_02} />
       <View style={styles.contextContainer}>
         <Text style={styles.text_01}>Naturlyrik: Gedichtsanal</Text>
         <Text style={styles.text_02}>Deutsch</Text>
@@ -21,13 +22,14 @@ const HeaderPoster = () => {
 
 const styles = StyleSheet.create({
   container: {
-    top: 20,
+    top: verticalScale(20),
     flexDirection: 'row',
-    marginLeft: marginDistance,
-    marginBottom: marginDistance,
+    marginLeft: horizontalScale(20),
+    marginBottom:  verticalScale(20),
   },
   contextContainer: {
-    marginLeft: marginDistance / 2,
+    marginLeft: horizontalScale(14),
+
   },
   image: {
     width: 126,
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     elevation: 7,
   },
   text_01: {
-    marginTop: 25,
+    marginTop: verticalScale(14),
     fontWeight: '500',
     fontSize: 19,
     color: '#000',

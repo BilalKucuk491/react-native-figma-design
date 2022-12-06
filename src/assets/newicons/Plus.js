@@ -3,8 +3,8 @@ import Svg, {Path} from 'react-native-svg';
 import {memo} from 'react';
 const SvgPlus = props => (
   <Svg
-    width="25"
-    height="25"
+    width="10"
+    height="10"
     viewBox="0 0 14 14"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

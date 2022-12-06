@@ -3,7 +3,8 @@ import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
 import ContentMenuOption from '../../ContentMenuOption/ContentMenuOption';
-const marginDistance = (SIZES.width - 337) / 3;
+import {TinyStar} from '../../../assets/newicons';
+import { horizontalScale, verticalScale } from '../../../constants/metrics';
 
 const FormelleStruktur = () => {
   return (
@@ -17,7 +18,7 @@ const FormelleStruktur = () => {
       {/* part 1 */}
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <Image style={styles.icon} source={icons.tinyStar} />
+          <TinyStar />
         </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>1</Text>
@@ -26,7 +27,7 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Einleitung</Text>
           </View>
-          <ContentMenuOption/>
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -36,7 +37,7 @@ const FormelleStruktur = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <Image style={styles.icon} source={icons.tinyStar} />
+          <TinyStar />
         </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>2</Text>
@@ -45,8 +46,7 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Hauptteil</Text>
           </View>
-          <ContentMenuOption/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -54,7 +54,7 @@ const FormelleStruktur = () => {
 
       <View style={styles.contextContainer}>
         <View style={styles.iconContainer}>
-          <Image style={styles.icon} source={icons.tinyStar} />
+          <TinyStar />
         </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>3</Text>
@@ -63,8 +63,7 @@ const FormelleStruktur = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Schluss</Text>
           </View>
-          <ContentMenuOption/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -75,10 +74,10 @@ const FormelleStruktur = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: marginDistance * 2,
+    marginBottom: verticalScale(50),
   },
   headerContextContainer: {
-    marginLeft: marginDistance,
+    marginLeft: horizontalScale(20),
   },
   title: {
     fontFamily: FontIos,
@@ -93,26 +92,26 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 15,
     color: '#989898',
-    marginTop: 8,
+    marginTop: verticalScale(4),
   },
   subTitleLine: {
     height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 6,
+    marginTop: verticalScale(4),
   },
   contextContainer: {
     flexDirection: 'row',
-    marginLeft: marginDistance / 5,
-    marginTop: 16,
+    marginTop: verticalScale(14),
+    marginLeft:horizontalScale(14)
   },
   iconContainer: {
-    marginLeft: 10,
     justifyContent: 'center',
     alignItems: 'center',
+    marginLeft:-horizontalScale(6.31),
+    marginRight:horizontalScale(6.37),
+    marginTop:-verticalScale(5),
   },
-  icon: {},
   numContainer: {
-    marginLeft: SIZES.width / 45,
   },
   numText: {
     fontFamily: FontIos,
@@ -121,7 +120,7 @@ const styles = StyleSheet.create({
     color: '#898A8D',
   },
   textContainer: {
-    marginLeft: marginDistance * 0.6,
+    marginLeft: horizontalScale(14),
   },
   text: {
     fontFamily: FontIos,
@@ -131,23 +130,24 @@ const styles = StyleSheet.create({
   },
   middleLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance,
+    marginTop: verticalScale(14),
+    marginLeft: horizontalScale(20),
   },
   subLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance*2,
+    marginTop: verticalScale(13),
+    marginLeft: horizontalScale(46),
+
   },
   partContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 20,
+    marginRight: horizontalScale(21),
   },
 });
 

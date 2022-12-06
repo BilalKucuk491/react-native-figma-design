@@ -8,13 +8,15 @@ import {
   MenuTrigger,
 } from 'react-native-popup-menu';
 import {FontIos} from '../../constants/theme';
+import { BlackDots, TreeDots } from '../../assets/newicons';
+import { verticalScale } from '../../constants/metrics';
 const ContentMenuOption = () => {
   const [modalVisibility, setModalVisibility] = useState(false);
 
   return (
     <TouchableOpacity onPress={() => setModalVisibility(!modalVisibility)}>
       <View style={styles.circleContainer}>
-        <Image source={icons.blackDots} />
+       <TreeDots/>
       </View>
       {modalVisibility && (
         <Menu opened={modalVisibility}>
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
   circleContainer: {
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop:verticalScale(5)
   },
 
   menuOptions: {

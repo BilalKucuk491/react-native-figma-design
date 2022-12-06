@@ -2,8 +2,9 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../../constants';
 import {FontIos} from '../../../constants/theme';
-import TreeDot from '../../ContentMenuOption/ContentMenuOption';
-const marginDistance = (SIZES.width - 337) / 3;
+import ContentMenuOption from '../../ContentMenuOption/ContentMenuOption';
+import {TinyStar} from '../../../assets/newicons';
+import { horizontalScale, verticalScale } from '../../../constants/metrics';
 
 const Formulierungshilfen = () => {
   return (
@@ -16,9 +17,6 @@ const Formulierungshilfen = () => {
 
       {/* part 1 */}
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
         <View style={styles.numContainer}>
           <Text style={styles.numText}>7</Text>
         </View>
@@ -26,8 +24,7 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Satzanfänge</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -36,9 +33,7 @@ const Formulierungshilfen = () => {
       {/* part 2       */}
 
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
+       
         <View style={styles.numContainer}>
           <Text style={styles.numText}>8</Text>
         </View>
@@ -46,19 +41,15 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Beschreibung/Wirkung</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
       <View style={styles.subLine} />
 
       {/* part 3 */}
-
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
+       
         <View style={styles.numContainer}>
           <Text style={styles.numText}>9</Text>
         </View>
@@ -66,29 +57,23 @@ const Formulierungshilfen = () => {
           <View style={styles.textContainer}>
             <Text style={styles.text}>Synonyme</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
       <View style={styles.subLine} />
 
       {/* part 4 */}
-
       <View style={styles.contextContainer}>
-        <View style={styles.iconContainer}>
-          {/* <Image style={styles.icon} source={icons.tinyStar} /> */}
-        </View>
+      
         <View style={styles.numContainer}>
           <Text style={styles.numText}>10</Text>
         </View>
         <View style={styles.partContainer}>
-    
-          <View style={{marginLeft: marginDistance * 0.30}}>
+          <View style={{marginLeft:horizontalScale(13)}}>
             <Text style={styles.text}>Sprachliche Mittel</Text>
           </View>
-          <TreeDot/>
-
+          <ContentMenuOption />
         </View>
       </View>
 
@@ -99,10 +84,10 @@ const Formulierungshilfen = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginBottom: marginDistance * 2,
+    marginBottom: verticalScale(50),
   },
   headerContextContainer: {
-    marginLeft: marginDistance,
+    marginLeft: horizontalScale(20),
   },
   title: {
     fontFamily: FontIos,
@@ -117,26 +102,19 @@ const styles = StyleSheet.create({
     fontSize: 15,
     lineHeight: 15,
     color: '#989898',
-    marginTop: 8,
+    marginTop: verticalScale(4),
   },
   subTitleLine: {
     height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 6,
+    marginTop: verticalScale(4),
   },
   contextContainer: {
     flexDirection: 'row',
-    marginLeft: marginDistance / 5,
-    marginTop: 16,
+    marginTop: verticalScale(14),
+    marginLeft:horizontalScale(20)
   },
-  iconContainer: {
-    marginLeft: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  icon: {},
   numContainer: {
-    marginLeft: SIZES.width / 24,
   },
   numText: {
     fontFamily: FontIos,
@@ -145,7 +123,7 @@ const styles = StyleSheet.create({
     color: '#898A8D',
   },
   textContainer: {
-    marginLeft: marginDistance * 0.6,
+    marginLeft: horizontalScale(20),
   },
   text: {
     fontFamily: FontIos,
@@ -155,23 +133,24 @@ const styles = StyleSheet.create({
   },
   middleLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance,
+    marginTop: verticalScale(14),
+    marginLeft: horizontalScale(20),
   },
   subLine: {
     flex: 1,
-    height: 1.2,
+    height: 1,
     backgroundColor: '#C6C6C8',
-    marginTop: 16,
-    marginLeft: marginDistance*2,
+    marginTop: verticalScale(13),
+    marginLeft: horizontalScale(46),
+
   },
   partContainer: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginRight: 20,
+    marginRight: horizontalScale(21),
   },
 });
 

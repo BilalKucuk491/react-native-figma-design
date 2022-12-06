@@ -1,13 +1,7 @@
 import {
   image_00,
-  image_01,
-  image_02,
-  image_03,
-  image_04,
-  image_05,
-  image_06,
+  image_01,image_02,image_03,image_04,image_05,image_06
 } from '../../constants/images';
-
 const dummyData = [
   {
     image_path: image_04,

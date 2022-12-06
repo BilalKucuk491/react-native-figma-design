@@ -3,8 +3,8 @@ import Svg, {Mask, Path} from 'react-native-svg';
 import {memo} from 'react';
 const SvgDialog = props => (
   <Svg
-    width="25"
-    height="25"
+    width="18"
+    height="18"
     viewBox="0 0 18 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

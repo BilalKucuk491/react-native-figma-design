@@ -2,6 +2,7 @@ import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 import {icons, SIZES} from '../../constants';
 import { FontIos } from '../../constants/theme';
+import { Navbar } from '../../assets/newicons';
 
 const Header = () => {
   return (
@@ -20,7 +21,8 @@ const Header = () => {
           </View>
 
           <View style={styles.navbarIconContainer}>
-            <Image style={styles.navbarIcon} source={icons.navbar} />
+          <Navbar />
+
           </View>
         </View>
       </>
@@ -77,6 +79,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     bottom: 20,
   },
-  navbarIcon: {},
 });
 export default Header;

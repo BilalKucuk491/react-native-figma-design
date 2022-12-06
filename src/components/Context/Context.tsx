@@ -6,8 +6,8 @@ import FormalerAufbau from '../Zuletzt/FormalerAufbau';
 import Formulierungshilfen from '../Zuletzt/Formulierungshilfen';
 import EpochenDerNaturlyrik from '../Zuletzt/EpochenDerNaturlyrik';
 import AlsWichtigMarkierteInfos from '../Zuletzt/AlsWichtigMarkierteInfos';
+import { verticalScale } from '../../constants/metrics';
 
-const marginDistance = (SIZES.width - 337) / 3;
 
 const Context = () => {
   return (
@@ -25,7 +25,7 @@ const Context = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: marginDistance / 2,
+    marginTop: verticalScale(30),
   },
 });
 
