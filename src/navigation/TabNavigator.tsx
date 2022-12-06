@@ -42,9 +42,8 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <>
-                {focused == true ? <Zuletzt2 /> : <Zuletzt />}
-                </>
+                <TabIcon iconName={"Zuletzt"} focused={focused} label="Zuletzt"  />
+
               );
             }
           },
@@ -64,9 +63,8 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <>
-                {focused == true ? <Gespeichert /> : <Gespeichert2 />}
-                </>
+                <TabIcon iconName={"Gespeichert"} focused={focused} label="Gespeichert"  />
+
               );
             }
           },
@@ -87,9 +85,7 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <>
-                {focused == true ? <Suchen2 /> : <Suchen />}
-                </>
+                <TabIcon iconName={"Suchen"} focused={focused} label="Suchen"  />
               );
             }
           },
@@ -109,9 +105,7 @@ const TabNavigator = () => {
           tabBarIcon: ({focused}) => {
             if (!isModalVisible) {
               return (
-                <>
-                {focused == true ? <Person2 /> : <Person />}
-                </>
+                <TabIcon iconName={"Spirit"} focused={focused} label="Spirit"  />
               );
             }
           },

@@ -1,12 +1,33 @@
 import {View, Text, Image} from 'react-native';
 import React from 'react';
 import {FONTS, COLORS} from '../../constants/index';
-import { TabIconInterface } from '../../types/TabIconInterface';
+import {TabIconInterface} from '../../types/TabIconInterface';
+import {Gespeichert, Person, Suchen, Zuletzt} from '../../assets/newicons';
+import Suchen2 from '../../assets/newicons/Suchen2';
+import Zuletzt2 from '../../assets/newicons/Zuletzt2';
+import Gespeichert2 from '../../assets/newicons/Gespeichert2';
+import Person2 from '../../assets/newicons/Person2';
+import { verticalScale } from '../../constants/metrics';
+import { FontIos } from '../../constants/theme';
 
+const ControlIcon = (iconName: String, focused: boolean) => {
+  switch (iconName) {
+    case 'Zuletzt':
+      return focused ? <Zuletzt2 /> : <Zuletzt />;
+    case 'Gespeichert':
+      return focused ? <Gespeichert /> : <Gespeichert2 />;
+    case 'Suchen':
+      return focused ? <Suchen2 /> : <Suchen />;
+    case 'Spirit':
+      return focused ? <Person2 /> : <Person/>;
+    default:
+      break;
+  }
+};
 
 const TabIcon = ({
   focused,
-  icon,
+  iconName,
   iconStyle,
   label,
   isTrade = false,
@@ -22,16 +43,7 @@ const TabIcon = ({
           borderRadius: 30,
           backgroundColor: COLORS.black,
         }}>
-        <Image
-          source={icon}
-          resizeMode="contain"
-          style={{
-            height: 25,
-            width: 25,
-            tintColor: COLORS.white,
-            ...iconStyle,
-          }}
-        />
+        {}
         <Text style={{color: COLORS.white, ...FONTS.h4}}>{label}</Text>
       </View>
     );
@@ -42,20 +54,17 @@ const TabIcon = ({
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <Image
-          source={icon}
-          resizeMode="contain"
-          style={{
-            height: 25,
-            width: 25,
-            tintColor: focused ? COLORS.focusedColor : COLORS.tintColor,
-            ...iconStyle,
-          }}
-        />
+          
+        {ControlIcon(iconName,focused)}
+
         <Text
           style={{
             color: focused ? COLORS.focusedColor : COLORS.tintColor,
-            fontFamily: 'Roboto-Bold', fontSize: 14, lineHeight: 22
+            fontFamily: FontIos,
+            fontWeight:"500",
+            fontSize: 14,
+            lineHeight: 22,
+            marginTop:verticalScale(5.5)
           }}>
           {label}
         </Text>
